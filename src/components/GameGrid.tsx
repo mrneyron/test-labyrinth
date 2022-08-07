@@ -15,11 +15,13 @@ export default function GameGrid() {
 
   React.useEffect(() => {
     setListMoves(generateMoves());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   React.useEffect(() => {
     const pos = calculateAnswer(listMoves);
     setAnswer(pos);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [listMoves]);
 
   const deleteFromArray = (array: number[], key: number) => {
